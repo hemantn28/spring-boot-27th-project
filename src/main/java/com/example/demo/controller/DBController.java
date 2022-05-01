@@ -14,6 +14,7 @@ public class DBController {
     //Create
     @Autowired
     CityRepository cityRepository;
+
     @RequestMapping(value = "add_city_db",method = RequestMethod.POST)
     public String add(@RequestBody City city){
         cityRepository.save(city);
